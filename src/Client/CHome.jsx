@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import FTable from "../freelancer/FTable";
-import { Card, Accordion, Button } from "react-bootstrap";
+import { Card, Accordion} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import store from "../../src/store";
 import axios from "axios";
