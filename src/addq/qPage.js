@@ -19,7 +19,7 @@ state={
 }
   loadData = () => {
     return axios
-      .get(`http://localhost:5001/Posts/all`)
+      .get(`https://devlancerbackend.herokuapp.com/Posts/all`)
       .then(result => {
         console.log(result);
         this.setState({
@@ -99,7 +99,7 @@ if (this.state.loading === false) {  Questions = this.state.data.map(item =>
   <Card.Header>Filter</Card.Header>
   <Card.Body>
     <Card.Title>Select langouge </Card.Title>
-    <Card.Text>
+    <Card.Text as='div'>
     <div>
   <input type="radio" id="css" name="drone" value="css"
          />
@@ -122,7 +122,7 @@ if (this.state.loading === false) {  Questions = this.state.data.map(item =>
 </div>
     </Card.Text>
     <Card.Title> _______  </Card.Title>
-    <Card.Text>
+    <Card.Text as='div'>
        <div>
 
 {console.log(this.state.data)}

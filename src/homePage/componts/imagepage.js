@@ -33,11 +33,12 @@ Hire expert freelancers for any job, online<br/></strong></h1>
 </Spring>
 
         {/* </Container> */}
-        <BrowserRouter>
+        {/* <BrowserRouter>
         <Switch>
+          
         <Route exact path='/addProject' component={addProject} />
         </Switch>
-        </BrowserRouter>
+        </BrowserRouter> */}
       </div>
     )
   }

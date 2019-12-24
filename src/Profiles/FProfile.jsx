@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import FTable from "../freelancer/FTable";
+// import FTable from "../freelancer/FTable";
 import { Card } from "react-bootstrap";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -13,7 +13,7 @@ export default class CHome extends Component {
  };
  componentDidMount() {
   axios
-   .get("http://localhost:5001/projects/all")
+   .get("https://devlancerbackend.herokuapp.com/projects/all")
    .then(res => {
     // console.log(res.data)
     this.setState({ data: res.data, loading: true });

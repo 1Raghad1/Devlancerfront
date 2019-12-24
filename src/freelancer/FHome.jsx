@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import FTable from '../freelancer/FTable'
+// import FTable from '../freelancer/FTable'
 import {Card } from 'react-bootstrap'
 import axios from 'axios'
 import {Link } from 'react-router-dom'
@@ -15,7 +15,7 @@ export default class CHome extends Component {
 }
   }
   componentDidMount(){
-    axios.get('http://localhost:5001/projects/all').then((res)=>{
+    axios.get('https://devlancerbackend.herokuapp.com/projects/all').then((res)=>{
 // console.log(res.data)
 this.setState({data:res.data,loading:true})
     }).catch((err)=>{
@@ -32,7 +32,7 @@ this.setState({data:res.data,loading:true})
         if( item.freelancer_ids.includes(this.props.match.params.id))
         {
           console.log(item)
-          return <Card>
+          return <Card key={item._id}>
         <Card.Header>{item.title}</Card.Header>
           <Card.Body>
             <blockquote className="blockquote mb-0">
@@ -55,11 +55,11 @@ this.setState({data:res.data,loading:true})
         <br/>
             <div className="px-4 pt-0 pb-4 bg-dark">
                 <div className="media align-items-end profile-header">
-                    <div className="profile mr-3"><br/><img src="https://elysator.com/wp-content/uploads/blank-profile-picture-973460_1280-e1523978675847.png" alt="..." width="130" class="rounded mb-2 img-thumbnail"/>
+                    <div className="profile mr-3"><br/><img src="https://elysator.com/wp-content/uploads/blank-profile-picture-973460_1280-e1523978675847.png" alt="..." width="130" className="rounded mb-2 img-thumbnail"/>
                     <a href="#" className="btn btn-dark btn-sm btn-block">Edit profile</a></div>
                     <div className="media-body mb-5 text-white">
                         <h4 className="mt-0 mb-0">Israa Shuri</h4>
-                        <p className="small mb-4"> <i class="fa fa-map-marker mr-2"></i>Makkah</p>
+                        <p className="small mb-4"> <i className="fa fa-map-marker mr-2"></i>Makkah</p>
                     </div>
                 </div>
 <br/>
@@ -72,10 +72,10 @@ this.setState({data:res.data,loading:true})
 </div>
       <ul className="list-inline mb-0">
                     <li className="list-inline-item">
-                        <h5 >241</h5> <i class="fa fa-file mr-1"/>Project
+                        <h5 >241</h5> <i className="fa fa-file mr-1"/>Project
                     </li>
                     <li className="list-inline-item">
-                        <h5 >Rating</h5> <i class="fa fa-star mr-1"/>
+                        <h5 >Rating</h5> <i className="fa fa-star mr-1"/>
                         <i className="fa fa-star mr-1"/>
                         <i className="fa fa-star-half-o mr-1"/>
                         <i className="fa fa-star-o mr-1"/>
@@ -86,7 +86,7 @@ this.setState({data:res.data,loading:true})
             </div>
             <div className="py-4 px-4">
                 <div className="d-flex align-items-center justify-content-between mb-3">
-                    <h5 className="mb-0"> Recent Projects </h5><a href="#" class="btn btn-link text-muted">Show all</a>
+                    <h5 className="mb-0"> Recent Projects </h5><a href="#" className="btn btn-link text-muted">Show all</a>
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gridGap: 20, margin:"auto"}}>
                 </div>

@@ -14,7 +14,7 @@ class ShowPost extends Component {
   };
   loadData = () => {
     return axios
-      .get(`http://localhost:5001/posts/` + this.props.match.params.id)
+      .get(`https://devlancerbackend.herokuapp.com/posts/` + this.props.match.params.id)
       .then(res => {
         console.log(res);
         this.setState({
@@ -39,9 +39,9 @@ onSubmit=(e)=>{
       User_id: this.state.id,
          Post_id: this.props.match.params.id
         }
-        axios.post('http://localhost:5001/comment/add',comment)
+        axios.post('https://devlancerbackend.herokuapp.com/comment/add',comment)
         .then(res => console.log(res.data)
-        ) 
+        ).catch(err=>console.log(err)) 
         console.log(comment)
 this.redirect()
     }
@@ -50,8 +50,8 @@ this.redirect()
     }
 
   loadComment = () => {
-    return axios
-      .get(`http://localhost:5001/comment/all`)
+   axios
+      .get(`https://devlancerbackend.herokuapp.com/comment/all`)
       .then(result => {
         console.log(result);
         this.setState({
@@ -59,15 +59,14 @@ this.redirect()
       loading: false,
         });
          console.log(this.state.comments);
-      })
-           .catch(error => {
+      }).catch(error => {
         console.error("error: ", error);
       });
   };
 
    componentDidMount(){
 this.loadData()
-this.loadComment()
+// this.loadComment()
    }
     render() {
       let Ans
@@ -138,7 +137,7 @@ if (this.state.loading === false) {  Ans = this.state.comments.map(item =>
                 {this.state.data.tags + " "}
               </p>
             </small>
-            <Card.Text>
+            <Card.Text as='div'>
               <br />
               <h5>{this.state.data.description}</h5>
             </Card.Text>

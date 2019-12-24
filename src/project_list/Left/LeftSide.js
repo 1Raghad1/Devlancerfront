@@ -34,11 +34,11 @@ exerciseList() {
   console.log(this.props.project);
   return this.props.project.map(project => {
       console.log(project.title);
-    return <Card  style={{ padding: '15rm', height: '20rm',marginBottom:'50px',width:"10rm" }}>
+    return <Card key={project._id} style={{ padding: '15rm', height: '20rm',marginBottom:'50px',width:"10rm" }}>
             <Card.Body>
             <div className="thr"><Card.Title >{project.title}</Card.Title>
   <Card.Subtitle className="mb-2 text-muted">tags:{
-    project.tags.map( tag => {return <span>{tag}</span>})
+    project.tags.map( tag => {return <span key={tag}>{tag}</span>})
   }</Card.Subtitle></div>
   <Button variant="primary" onClick={ ()=> this.props.detailsClick(project._id)} >Show</Button>
             </Card.Body>
@@ -57,8 +57,8 @@ exerciseList() {
             <br/>  
             <h1>Projects List: </h1>    
             <br/>    
-            <div class="fixed">
-            <div class="p-4 bg-light rounded shadow-md">
+            <div className="fixed">
+            <div className="p-4 bg-light rounded shadow-md">
             <br/>
                     {this.exerciseList()}
                 </div>

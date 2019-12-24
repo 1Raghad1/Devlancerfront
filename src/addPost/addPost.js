@@ -66,7 +66,7 @@ onSubmit(e){
             client_id:this.state.client_id,
             client_name:this.state.client_name,
         }
-        axios.post('http://localhost:5001/projects/add',project)
+        axios.post('https://devlancerbackend.herokuapp.com/projects/add',project)
         .then(res => console.log(res.data)
        
         
@@ -354,8 +354,8 @@ let tag = this.state.chips.map(x => x + " ");
     <div className="col-md-8">
       <div className="card-body">
         <h5 className="card-title"> {this.state.Title}</h5>
-        <p className="card-text"> {this.state.desc}
-        <p>{this.state.price}</p></p>
+        <p className="card-text"> {this.state.desc}</p>
+        <p>{this.state.price}</p>
         <p className="card-text"><small className="text-muted">{tag}</small></p>
       </div>
     </div>

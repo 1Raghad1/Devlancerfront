@@ -41,7 +41,7 @@ export default class ChangePass extends Component {
 //    token =JSON.parse(token)
 const st = store.getState()
   axios
-   .put(`http://localhost:5001/users/changepass/${this.state.new1}/${st.auth.user.id}`, obj)
+   .put(`https://devlancerbackend.herokuapp.com/users/changepass/${this.state.new1}/${st.auth.user.id}`, obj)
    .then(res => {
     console.log(res.data);
     localStorage.removeItem("usertoken");

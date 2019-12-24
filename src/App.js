@@ -73,7 +73,7 @@ export default class App extends Component {
         {type == "client" ? (
          <PrivateRoute path="/addProject/" component={addProject} />
         ) : (
-         <PrivateRoute path="/addProject/" component={addProjectF} />
+         <PrivateRoute path="/" component={HomePage} />
         )}
         {type != "client" ? (
          <PrivateRoute path="/dashboard/:id" component={FHome} />
