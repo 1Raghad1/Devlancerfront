@@ -5,7 +5,7 @@ import axios from 'axios'
 import {Link } from 'react-router-dom'
 import store from '../../src/store'
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
-const  user=store.getState()
+// const  user=store.getState()
 export default class CHome extends Component {
   constructor(props){
     super(props)

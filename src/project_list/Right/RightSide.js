@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import {Image, Navbar, Nav,Container,Col,Button} from 'react-bootstrap'
+import {Button} from 'react-bootstrap'
 import axios from 'axios'
 import store from '../.././store'
-import ButterToast, { Cinnamon, POS_BOTTOM, POS_RIGHT ,POS_TOP,POS_CENTER  } from 'butter-toast';
+// import ButterToast, { Cinnamon, POS_BOTTOM, POS_RIGHT ,POS_TOP,POS_CENTER  } from 'butter-toast';
 export default class RightSide extends Component {
     applyhundler = () => {
         const st = store.getState()

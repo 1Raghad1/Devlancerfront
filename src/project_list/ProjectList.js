@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import '../App.css';
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import axios from 'axios'
 import Left from "./Left/LeftSide";
 import Right from "./Right/RightSide";
 // import Header from "./Header";
 
-import {Image, Row, Col,Container} from 'react-bootstrap'
-import wowlogo from './img/home-bg.jpg'
+
 
 export default class ProjectList extends Component {
     state={

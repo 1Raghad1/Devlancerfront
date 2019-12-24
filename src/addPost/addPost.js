@@ -5,9 +5,9 @@ import {
   Row,
   Button,
   InputGroup,
-  Card
+
 } from "react-bootstrap";
-import classnames from "classnames";
+
 import PropTypes from "prop-types";
 import { connect , } from "react-redux";
 import axios from 'axios'
@@ -15,8 +15,7 @@ import "./addProject.css";
 import storage from "./Firebase/index";
 import ChipInput from "material-ui-chip-input";
 import Stepper from "react-js-stepper";
-import { useToasts } from 'react-toast-notifications'
-import store from "../store";
+
 import ButterToast, { Cinnamon, POS_BOTTOM, POS_RIGHT ,POS_TOP,POS_CENTER  } from 'butter-toast';
 const KeyCodes = {
   comma: 188,

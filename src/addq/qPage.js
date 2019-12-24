@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react'
 import './q.css'
-import {Container,Card,Row,Col,Image,Button,Dropdown,ButtonToolbar,SplitButton} from 'react-bootstrap'
+import {Card,Row,Col,Image,Button,Dropdown,ButtonToolbar,SplitButton} from 'react-bootstrap'
 import AddQ from './addq'
 import axios from 'axios'
 import Show from './ShowPost'

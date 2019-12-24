@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import {
-  BrowserRouter ,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+// import {
+//   BrowserRouter ,
+//   Switch,
+//   Route,
+//   Link
+// } from "react-router-dom";
 import { Spring } from 'react-spring/renderprops'
 import addProject from '../../addPost/addPost'
 import {Image, Container,Button} from 'react-bootstrap'

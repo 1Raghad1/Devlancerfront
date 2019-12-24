@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
- import store from '../store'
+
  import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { Card, Container, Form ,Button} from "react-bootstrap";
+import { Card, Form ,Button} from "react-bootstrap";
 class ShowPost extends Component {
   state = {
     data: "",

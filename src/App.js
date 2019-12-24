@@ -8,23 +8,23 @@ import { setCurrentUser, logoutUser } from "./actions/authActions";
 import store from "./store";
 // import Qpage from './addq/addq'
 import ShowPost from './addq/ShowPost'
-import Up from "../src/addPost/UploadForm";
+// import Up from "../src/addPost/UploadForm";
 import HomePage from "./homePage/componts/homepage";
 import addProject from "./addPost/addPost";
-import addProjectF from "./addPost/FAddprojet";
+// import addProjectF from "./addPost/FAddprojet";
 import FHome from "./freelancer/FHome";
 // import addProject from './addPost/addPost'
-import Checkout from "./checkout/Checkout";
+// import Checkout from "./checkout/Checkout";
 import FProfile from './Profiles/FProfile'
 import CProfile from './Profiles/Cprofile'
-import axios from "axios";
+// import axios from "axios";
 import Qpage from "./addq/qPage";
 import Chat from "./chat/Chat/Chat";
 import Register from "./components/auth/Signup";
 import Login from "./components/auth/Login";
 import ChangePass from './components/auth/ChangePass'
 import PrivateRoute from "./components/private-route/PrivateRoute";
-import Dashboard from "./components/dashboard/Dashboard";
+// import Dashboard from "./components/dashboard/Dashboard";
 import CHome from "./Client/CHome";
 import Displayprojects from './project_list/ProjectList'
 // Check for token to keep user logged in
